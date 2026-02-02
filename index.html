@@ -1,89 +1,162 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Vladilen CV</title>
-    </head>
-    <body>
-        <table cellspacing="15">
-            <tr>
-                <td>
-                    <img src="avatar.jpeg" width="200" alt="тут моя фотка"/>
-                </td>
-                <td>
-                    <h1>Владилен Минин</h1>
-                    <p><em>Я основатель одноименного <strong>Youtube канала</strong></em></p>
-                    <p>Я люблю путешествовать,заниматься спортом и программировать</p> 
-                </td>
-            </tr>
-        </table>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме: Павел, Python & Telegram Bot разработчик</title>
+    <style>
+        :root {
+            --bg-color: #f4f4f9;
+            --text-color: #333;
+            --header-color: #2c3e50;
+            --accent-color: #2980b9;
+            --card-bg: #ffffff;
+            --shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: var(--header-color);
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        h2 {
+            color: var(--header-color);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8rem;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skills-list li {
+            background-color: #ecf0f1;
+            color: #34495e;
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        .project-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            transition: box-shadow 0.3s;
+        }
+        .project-card:hover {
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .project-card h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+        }
+        .project-card a {
+            text-decoration: none;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        .contacts a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .contacts a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Павел</h1>
+            <p class="subtitle">Python & Telegram Bot Разработчик</p>
+        </header>
 
-        <hr>
+        <section id="about">
+            <h2>Обо мне</h2>
+            <p>
+                Начинающий, но целеустремленный разработчик с сильной страстью к созданию полезных и интуитивно понятных Telegram-ботов. Обладаю практическим опытом в разработке ботов различной сложности: от простых визиток до e-commerce решений с каталогами, корзинами и диалоговыми системами. Умею профессионально подходить к процессу разработки, включая создание чистой архитектуры, управление зависимостями (venv, pip) и версионирование кода (Git).
+            </p>
+        </section>
 
-        <h2>Мои социальные сети</h2>
-        <ul type="square">
-            <li><a href="https://instagram.com/vladilen.minin" target="blank">Instagram</a></li>
-            <li><a href="https://t.me/js_by_vladilen" target="blank">Telegram</a></li>
-        </ul>
+        <section id="skills">
+            <h2>Ключевые навыки</h2>
+            <ul class="skills-list">
+                <li>Python</li>
+                <li>python-telegram-bot</li>
+                <li>Git & GitHub</li>
+                <li>Работа с API</li>
+                <li>ConversationHandler</li>
+                <li>Хранение данных (JSON)</li>
+                <li>Асинхронное программирование</li>
+                <li>HTML & CSS</li>
+                <li>Linux (базовый уровень)</li>
+            </ul>
+        </section>
 
-        <hr>
+        <section id="projects">
+            <h2>Портфолио проектов</h2>
+            
+            <div class="project-card">
+                <h3><a href="https://github.com/Virtuoz266/Svechi-Teplo-Bot" target="_blank">🕯️ Бот-магазин "Тепло"</a></h3>
+                <p>Полнофункциональный e-commerce бот с интерактивным каталогом, персональной корзиной и диалоговой системой оформления заказа. Реализованы уведомления для администратора о новых заказах.</p>
+                <strong>Технологии:</strong> Python, ConversationHandler, InlineKeyboardMarkup, работа с файлами.
+            </div>
 
-        <h2>Мои хобби</h2>
-        <ol type="I">
-            <li>Блоггер</li>
-            <li>Быстрая езда на машинах</li>
-            <li>Спорт: ММА, лыжи</li>
-            <li>Путешествия</li>
-        </ol>
+            <div class="project-card">
+                <h3><a href="https://github.com/Virtuoz266/Kino-Quiz-Bot" target="_blank">🎬 Бот-викторина "КиноРазбор"</a></h3>
+                <p>Интерактивная система для вовлечения пользователей с таблицей лидеров, персональной статистикой и автоматическим еженедельным сбросом рейтинга с помощью Job Queue.</p>
+                <strong>Технологии:</strong> Python, JSON, Job Queue, обработка callback-запросов.
+            </div>
 
-        <hr>
+            <div class="project-card">
+                <h3><a href="https://github.com/Virtuoz266/Yoga-Bot" target="_blank">🧘 Бот-визитка "Дыхание"</a></h3>
+                <p>Элегантный и простой бот-визитка для студии йоги. Реализовано чистое, интуитивно понятное меню на кнопках для быстрой навигации по разделам: расписание, цены, контакты.</p>
+                <strong>Технологии:</strong> Python, InlineKeyboardMarkup, модульная структура кода.
+            </div>
+            
+        </section>
 
-        <h2>Опыт работы</h2>
-        <table border="1">
-            <tr>
-                <th>Компания</th>
-                <th>Должность</th>
-                <th>Год</th>
-            </tr>
-            <tr>
-                <td>EPAM</td>
-                <td>Software Engineer</td>
-                <td>2016-2017</td>
-            </tr>
-            <tr>
-                <td>Software Outsorcing Services</td>
-                <td>Lead Frontend</td>
-                <td>2017-2019</td>
-            </tr>
-        </table>
+        <section id="contacts" class="contacts">
+            <h2>Контакты</h2>
+            <p>
+                <a href="mailto:virtuoz455@gmail.com">Email: virtuoz455@gmail.com</a>
+                <a href="https://github.com/Virtuoz266" target="_blank">GitHub: Virtuoz266</a>
+                <!-- Добавьте сюда ссылку на ваш Telegram, если хотите -->
+                <!-- <a href="https://t.me/YourUsername" target="_blank">Telegram: @YourUsername</a> -->
+            </p>
+        </section>
 
-        <hr>
-
-        <h2>Youtube Курсы</h2>
-        <a href="youtube.html">Посмотреть список</a>
-
-        <hr>
-        <h2>Связаться со мной</h2>
-
-        <form action="/">
-            <label for="name">Ваше имя:</label>
-            <input type="text" id="name" placeholder="Введите ваше имя...">
-
-            <br>
-
-            <label for="email">Ваше Email:</label>
-            <input type="email" id="email" placeholder="Введите email...">
-
-            <br>
-
-            <label for="text">Ваше Сообщение:</label>
-            <br>
-            <textarea id="text" rows="2" cols="15"></textarea>
-
-            <br>
-
-            <input type="submit" value="Связаться!">
-        </form>
-
-    </body>
+    </div>
+</body>
 </html>
